@@ -1,0 +1,76 @@
+Objetivo
+* Entender os tipos de dados em JavaScript
+
+Conceito
+    Tipos de dados são de suma importância em qualquer linguagem de programação, e não porderia ser diferente em JavaScript.
+    São vários os tipos de dados que podem ser utilizados em JavaScript dentre eles podemos ressaltar:
+
+    var numero  = 1;              // Number
+    var palavra = "Developer";    // String
+    var decimal = 10.00;          // Number "utilizando casas decimais"
+    var objeto  = {               // Object representados por JSON JavaScript também trabalha com objetos
+        id: 1,
+        nome: "Fulano",
+        telefone: "+55 (18) 99655-5555"
+        credito: 20.50
+    };
+
+    Os tipo de dados podem se combinar entre si com operações aritméticas como em várias linguagens de programação Ex:
+    Usando variaveis para armazenar os valores:
+    var soma = 1 + 2;
+    console.log(soma); // imprime 3
+
+    Imprimindo o valor diretamente:
+    console.log(1 + 2) // imprime 3
+
+    Vale ressaltar que ao utilizar tipos de dados diferentes na mesma operação pode resultar em valores inesperados, é claro se não utilizados
+    da maneira correta. Ex:
+    Qual será resultado da operação abaixo a ser imprimida no console ?
+    console.log(12 + " é meu número da sorte!");
+
+    Resposta: "12 é meu número da sorte!"
+    Isso se deve aos tipos de dados serem 12 (number) e " é meu número da sorte!" (String), por debaixo dos panos o JavaScript entende da seguinte forma:
+    "12" + "12 é meu número da sorte!" => "12 é meu número da sorte!" Basicamente uma String concatenada.
+
+    Tipos Dinâmicos
+    Os tipos de dados em JavaScript são dinamicos, o que significa que uma variavel pode receber diferentes valores e continua sendo válida.
+    Ex:
+    var a = 1;
+    a++;
+    a = "Hello World!";
+
+    console.log(a); // imprime "Hello World!"
+    Lembre-se isso é totalmente possível mas não é uma boa prática uma vez que pode gerar confusoes além de esconder bugs posteriores.
+
+    Objetos
+    Objetos JavaScript são representados por "{}" onde possuem propriedades e valores. 
+    Ex: { nome: 'João Silva' }
+    propriedade -> nome
+    valor       -> 'João Silva'
+
+    As propriedades de um objeto podem ser acessadas de 2 formas:
+    // Criando objeto
+    var obj = { nome: 'João Silva' };
+    // Acesaando forma 1
+    obj.nome
+    // Acessando forma 2
+    obj['nome']
+
+    A segunda forma nos abre possibilidades de acessar propriedades sem nem mesmo conhecer quais são ela,
+    uma vez que podemos utilizar a chave sendo o valor de uma variável.
+    Ex:
+    var propriedade = 'nome';
+    obj[propriedade]
+    Mais detalhes sobre isso quando falarmos sobre arrays em JavaScript.
+
+
+Exercícios:
+Resolva os exercícios para praticar o conceito.
+
+Aprenda mais
+*w3schools.com
+    https://www.w3schools.com/js/default.asp
+    https://www.w3schools.com/js/js_datatypes.asp
+
+*10 Day of Javascript
+    https://www.hackerrank.com/domains/tutorials/10-days-of-javascript?filters%5Bstatus%5D%5B%5D=unsolved&badge_type=10-days-of-javascript
