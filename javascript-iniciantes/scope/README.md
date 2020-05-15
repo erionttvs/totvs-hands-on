@@ -87,7 +87,7 @@ incrementar();
 Isso pode se tornar uma dor de cabeça tremenda, caso o arquivo_2.js carregague primeiro na página do que o arquivo_1.js, 
 os valores podem se tornar incorretos se em outro ponto da pagina houver dependencia do valor incrementado da variavel do arquivo_2.js
 
-Quadro de exemplo para os escopos:
+## Quadro de exemplo para os escopos:
 ------------------------------------------------------------------|
 |		 // Escopo Global do arquivo JavaScript                   |
 |		 var mensagem;                                            |
@@ -111,7 +111,7 @@ Quadro de exemplo para os escopos:
 |		imprimir();                                               |
 |-----------------------------------------------------------------|
 
-Global Automático
+## Global Automático
 Quando atribuimos um valor a uma variável que não foi declarada ela automaticamente se tornará global.
 É preciso tomar cuidado para que esse tipo de situação não ocorra já que como abordado em "Escopo Global" pode gerar problemas.
 Abaixo temos um exemplo desta situação:
@@ -128,18 +128,17 @@ console.log(resultado)
 ...
 ```
 
-Strict Mode
+## Strict Mode
 Para acabar com os problemas de se ter variaveis globais que nao foram declaradas podemos utilizar o strict mode. 
 Que nada mais é do que colocar a diretiva "use strict"; no documento JavaScript.
 Isso ajuda a manter um código limpo pelo fato de forçar a declaração de variaveis globais caso sejam utilizadas.
 Abaixo temos uma tabela de compatibilidade dos Browsers em suas versões que começaram a aceitar o Stric mode:
---------------------------------------------------
-Chrome	|   IE	  |	Firefox	|	Safari	|	Opera |
---------------------------------------------------
-13.0 	|   10.0  |	4.0 	|	6.0     |	12.1  |
---------------------------------------------------
 
-Scopo do Strict Mode
+|Chrome	|   IE	  |	Firefox	|	Safari	|	Opera |
+--------------------------------------------------
+|13.0 	|   10.0  |	4.0 	|	6.0     |	12.1  |
+
+## Scopo do Strict Mode
 A diretiva "use strict"; precisa ser colocada no escopo que sera utilizada, portanto se declarada no inicio do arquivo sera toda sua extensão,
 ou se dentro de uma função por exemplo, então se limitará ao escopo da função.
 
@@ -194,10 +193,10 @@ function imprimir() {
 ...
 ```
 
-Exercícios:
+## Exercícios:
 Resolva os exercícios para praticar o conceito.
 
-Aprenda mais
+## Aprenda mais
 *w3schools.com
     https://www.w3schools.com/js/default.asp
     https://www.w3schools.com/js/js_scope.asp
