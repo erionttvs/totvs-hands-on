@@ -3,20 +3,19 @@ Entender como fuciona o escopo das variáveis em JavaScript.
 
 Conceito
 Para se desenvolver um código eficiente e evitar erros é necessário entendimento sobre o escopo.
-Escopo não é um tema complexo, em JavaScript já que temos somente dois tipos que são eles local e global.
+Escopo não é um tema complexo em JavaScript já que temos somente dois tipos que são eles local e global.
 
 Escopo local
-Variáveis definidas dentro de uma função possuem escopo "local", o que significa que se tornam inacessiveis do lado de "fora".
+Variáveis definidas dentro de uma função possuem escopo "local", o que significa que se tornam inacessíveis do lado de "fora".
 O termo lado de "fora" significa qualquer outra função ou arquivo JavaScript carregado na página.
-Podemos então entender que dentro das chaves "{ ... }" de uma função é onde nascem e morrem as variaveis locais de forma mais simplista.
-
+Podemos então entender que dentro das chaves "{ ... }" de uma função é onde nascem e morrem as variáveis locais, de forma mais simplista.
 Ex:
 function imprimir() {
     var mensagem = "Escopo local é fácil!."; // A variável mensagem possui escopo local pois é definida dentro da função "imprimir".
     console.log(mensagem);
 }
 
-Agora que sabemos que uma variavel de escopo local abrange somente a função qual é declarada, podemos então afirmar que trecho de codigo abaixo não funcionaria ?
+Agora que sabemos que uma variável de escopo local abrange somente a função a qual é declarada, podemos então afirmar que o trecho de codigo abaixo não funcionaria ?
 Ex:
 var mensagem;
 function carregarMensagem() {
@@ -29,9 +28,10 @@ carregarMensagem();
 imprimir();
 ...
 
-O código fonte acima funciona sem quaisquer problemas, isso se deve ao fato da variavel "mensagem" ter sido declarada fora do escopo das funções que a utilizam.
-Então podemos entender que essa variavel na verdade não é "local" mas sim "global", mais detalhes a abaixo, mas para fecharmos o conceito sobre variaveis locais, elas
-necessitam ser declaradas e utilizadas dentro das funções. Só porque algum valor é atribuido a uma variavel dentro de uma funçõa não siginifica que esse valor fica limitado somente ao escopo da função.
+O código fonte acima funciona sem quaisquer problemas, isso se deve ao fato da variável "mensagem" ter sido declarada fora do escopo das funções que a utilizam.
+Então podemos entender que essa variável na verdade não é "local" mas sim "global", mais detalhes abaixo, mas para fecharmos o conceito sobre variáveis locais, elas
+necessitam ser declaradas e utilizadas dentro das funções. 
+Só porque algum valor é atribuido a uma variável dentro de uma função não significa que esse valor retido somente no escopo da função.
 O que determina o escopo dela sempre vai ser a parte do código que ela foi declarada.
 
 Escopo Global
