@@ -10,13 +10,16 @@ Variáveis definidas dentro de uma função possuem escopo "local", o que signif
 O termo lado de "fora" significa qualquer outra função ou arquivo JavaScript carregado na página.
 Podemos então entender que dentro das chaves "{ ... }" de uma função é onde nascem e morrem as variáveis locais, de forma mais simplista.
 Ex:
+```
 function imprimir() {
     var mensagem = "Escopo local é fácil!."; // A variável mensagem possui escopo local pois é definida dentro da função "imprimir".
     console.log(mensagem);
 }
+```
 
 Agora que sabemos que uma variável de escopo local abrange somente a função a qual é declarada, podemos então afirmar que o trecho de codigo abaixo não funcionaria ?
 Ex:
+```
 var mensagem;
 function carregarMensagem() {
     mensagem = "Escopo local é fácil!.";
@@ -27,6 +30,7 @@ function imprimir() {
 carregarMensagem();
 imprimir();
 ...
+```
 
 O código fonte acima funciona sem quaisquer problemas, isso se deve ao fato da variável "mensagem" ter sido declarada fora do escopo das funções que a utilizam.
 Então podemos entender que essa variável na verdade não é "local" mas sim "global", mais detalhes abaixo, mas para fecharmos o conceito sobre variáveis locais, elas
@@ -39,7 +43,7 @@ As variaveis de escopo "global" diferentemente das "locais" tem toda a pagina co
 mas também a todo arquivo que foi carregado na página incluindo suas funções.
 É necessario tomar muito cuidado ao declarar uma variável "global" já que isso pode sobrescrever outras já definidas em pontos diferentes da página, como disse todos os arquivos tem acesso a ela.
 Ex:
-
+```
 arquivo_1.js
 var variavelGlobal = "Escopo global pode se tornar problematico";
 
@@ -52,9 +56,11 @@ function operacao2() {
 }
 
 console.log(variavelGlobal);
+```
 
 Agora imagine esta situação onde temos 2 arquivos JavaScript que utilizam este mesmo nome de variável.
 Ex:
+```
 arquivo_1.js
 var variavelGlobal = "Escopo global pode se tornar problematico";
 
@@ -76,6 +82,7 @@ function incrementar() {
 
 incrementar();
 ...
+```
 
 Isso pode se tornar uma dor de cabeça tremenda, caso o arquivo_2.js carregague primeiro na página do que o arquivo_1.js, 
 os valores podem se tornar incorretos se em outro ponto da pagina houver dependencia do valor incrementado da variavel do arquivo_2.js
@@ -109,7 +116,7 @@ Quando atribuimos um valor a uma variável que não foi declarada ela automatica
 É preciso tomar cuidado para que esse tipo de situação não ocorra já que como abordado em "Escopo Global" pode gerar problemas.
 Abaixo temos um exemplo desta situação:
 Ex:
-
+```
 arquivo1.js
 
 function soma(valor1, valor2) {
@@ -119,6 +126,7 @@ function soma(valor1, valor2) {
 console.log(resultado)
 // Imprime o resultado sem problemas por que a variavel se tornou global automaticamente 
 ...
+```
 
 Strict Mode
 Para acabar com os problemas de se ter variaveis globais que nao foram declaradas podemos utilizar o strict mode. 
@@ -137,7 +145,7 @@ ou se dentro de uma função por exemplo, então se limitará ao escopo da funç
 
 Ao se criar uma variavel automatico mesmo utilizando Strinct Mode irá lançar uma exeption.
 Exemplo de utilização incorreta quando isso acontece:
-
+```
 arquivo1.js
 
 "use strict";
@@ -184,6 +192,7 @@ function imprimir() {
 
 // Continua a executar sem problemas pois o escopo de uma função não impacta nas outras
 ...
+```
 
 Exercícios:
 Resolva os exercícios para praticar o conceito.
