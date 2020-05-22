@@ -1,19 +1,21 @@
-
-color = 'blue';
+var color ;
 var quadrado;
 
 function criaCor() {
-    var color = 'blue';
+    color = 'blue';
 }
-
+ 
 function criaQuadrado() {
-    var quadrado = document.getElementById("exerc-1");
+    quadrado = document.getElementById("exerc-1");
 }
-
+  
 function init() {
+    criaCor()
+    criaQuadrado()
 
-    if(color) {
+    if(color = 'blue') {
         quadrado.textContent = color;
+        //quadrado.style.background= color;
     } else {
         quadrado.textContent = 'red';
     }
