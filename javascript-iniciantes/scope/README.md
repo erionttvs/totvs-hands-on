@@ -1,11 +1,11 @@
-Objetivo
+## Objetivo
 Entender como fuciona o escopo das variáveis em JavaScript.
 
-Conceito
+## Conceito
 Para se desenvolver um código eficiente e evitar erros é necessário entendimento sobre o escopo.
 Escopo não é um tema complexo em JavaScript já que temos somente dois tipos que são eles local e global.
 
-Escopo local
+## Escopo local
 Variáveis definidas dentro de uma função possuem escopo "local", o que significa que se tornam inacessíveis do lado de "fora".
 O termo lado de "fora" significa qualquer outra função ou arquivo JavaScript carregado na página.
 Podemos então entender que dentro das chaves "{ ... }" de uma função é onde nascem e morrem as variáveis locais, de forma mais simplista.
@@ -38,7 +38,7 @@ necessitam ser declaradas e utilizadas dentro das funções.
 Só porque algum valor é atribuido a uma variável dentro de uma função não significa que esse valor retido somente no escopo da função.
 O que determina o escopo dela sempre vai ser a parte do código que ela foi declarada.
 
-Escopo Global
+## Escopo Global
 As variaveis de escopo "global" diferentemente das "locais" tem toda a pagina como seu escopo, isso significa que se torna visivel não somente ao arquivo JavaScript e que foi declarada,
 mas também a todo arquivo que foi carregado na página incluindo suas funções.
 É necessario tomar muito cuidado ao declarar uma variável "global" já que isso pode sobrescrever outras já definidas em pontos diferentes da página, como disse todos os arquivos tem acesso a ela.
